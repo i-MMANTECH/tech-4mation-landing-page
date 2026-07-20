@@ -4,8 +4,8 @@
   "description": "Official website for Tech4mation LTD - Indigenous IT Company",
   "main": "index.html",
   "scripts": {
-    "start": "npx http-server -p 8000 -c-1",
-    "build": "npm run minify-css && npm run minify-js",
+    "start": "node init && npx http-server -p 8000 -c-1",
+    "build": "node init && npm run minify-css && npm run minify-js",
     "minify-css": "cleancss -o styles.min.css styles.css",
     "minify-js": "uglifyjs script.js -o script.min.js -c -m",
     "deploy": "netlify deploy --prod"
