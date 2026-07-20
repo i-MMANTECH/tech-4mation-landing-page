@@ -1,0 +1,36 @@
+{
+  "name": "tech4mation-website",
+  "version": "1.0.0",
+  "description": "Official website for Tech4mation LTD - Indigenous IT Company",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000 -c-1",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "cleancss -o styles.min.css styles.css",
+    "minify-js": "uglifyjs script.js -o script.min.js -c -m",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "tech4mation",
+    "website",
+    "IT solutions",
+    "web development",
+    "nigeria"
+  ],
+  "author": "Emmanuel Aro <emmanuelaro87@gmail.com>",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emmanuelaro/tech4mation-website"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "http-server": "^14.1.1",
+    "uglify-js": "^3.17.4",
+    "netlify-cli": "^17.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
